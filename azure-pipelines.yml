@@ -30,6 +30,9 @@ steps:
       npm run build
       npm --no-git-tag-version version $(GitVersion.SemVer)
       cp package.json dist/package.json
+      cp package-lock.json dist/package-lock.json
+      cd dist
+      npm ci
     displayName: 'build script'
 
   - task: Npm@1
