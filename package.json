@@ -31,8 +31,7 @@
     "lint": "tslint -t stylish --project \"tsconfig.json\"",
     "test": "jest --coverage",
     "test:watch": "jest --watch",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint"
+    "prepare": "npm run build"
   },
   "author": "Karim Shehadeh",
   "license": "Apache-2.0",
