@@ -26,10 +26,10 @@ steps:
 
   - script: |
       set -e
-      chmod u+x ./build/build.sh
-      cd "$(Build.SourcesDirectory)"
-      ./build/build.sh "$(GitVersion.SemVer)" "$(Build.SourceBranchName)"
-
+      npm ci
+      npm run build
+      npm --no-git-tag-version version $(GitVersion.SemVer)
+      cp package.json dist/package.json
     displayName: 'build script'
 
   - task: Npm@1
