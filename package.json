@@ -1,5 +1,5 @@
 {
-  "name": "ts-confluence-client",
+  "name": "@unleash-tech/ts-confluence-client",
   "version": "0.0.19",
   "description": "Modern confluence client written in Typescript.",
   "main": "dist/index.js",
