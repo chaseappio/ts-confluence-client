@@ -29,16 +29,12 @@ steps:
       npm ci
       npm run build
       npm --no-git-tag-version version $(GitVersion.SemVer)
-      cp package.json dist/package.json
-      cp package-lock.json dist/package-lock.json
-      cd dist
-      npm ci
     displayName: 'build script'
 
   - task: Npm@1
     inputs:
       command: 'publish'
-      workingDir: 'dist'
+      workingDir: '.'
       publishRegistry: 'useFeed'
       publishFeed: '370b2d0a-b669-4328-a091-9c000b5b86e0'
 
