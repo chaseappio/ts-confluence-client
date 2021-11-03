@@ -2,3 +2,6 @@ src
 tsconfig.json
 tslint.json
 .prettierrc
+.npmrc
+azure-pipelines.yml
+GitVersion.yml
